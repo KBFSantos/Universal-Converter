@@ -12,3 +12,7 @@ Many people have difficulty converting some data manually, and it is really exha
 - [x] Binary Converter, [ Decimal,Hexadecimal, Char]
 - [x] Sig Converter, [Code Style & IDA Style]
 - [x] ASCII Converter, [Hexadecimal, Decimal]
+
+## License
+
+Universal Converter is licensed under the MIT License, see [License](https://https://github.com/Static-Will/Universal-Converter/blob/main/LICENSE) for more information.
