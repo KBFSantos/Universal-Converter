@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Will\source\repos\PUC\PUC\Converters.h(11,20): warning C4018: '<=': incompatibilidade de signed/unsigned
+C:\Users\Will\source\repos\PUC\PUC\main.cpp(26): message : consulte a referência à instanciação 'int BinaryToInt<16>(std::bitset<16> &)' do modelo que está sendo compilada
+  PUC.vcxproj -> C:\Users\Will\source\repos\PUC\Debug\PUC.exe
