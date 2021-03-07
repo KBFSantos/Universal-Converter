@@ -15,4 +15,4 @@ Many people have difficulty converting some data manually, and it is really exha
 
 ## License
 
-Universal Converter is licensed under the MIT License, see [License](https://https://github.com/Static-Will/Universal-Converter/blob/main/LICENSE) for more information.
+Universal Converter is licensed under the MIT License, see [License](https://github.com/Static-Will/Universal-Converter/blob/main/LICENSE) for more information.
