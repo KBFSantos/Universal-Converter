@@ -1,6 +1,7 @@
 #include "Converters.h"
 #include <Windows.h>
 
+
 void PrintLogo();
 
 int main() {
@@ -10,10 +11,10 @@ int main() {
 		PrintLogo();
 
 		int choose = 0;
-		std::cout << "1 - Binary Converter\n2 - Signature Converter\n3 - ASCII Converter\n\n";
+		std::cout << "1 - Binary Converter\n2 - Signature Converter\n3 - ASCII Converter\n4 - Case Converter\n\n";
 
 		std::cout << "Select: ";
-		std::cin.clear();
+		
 		std::cin >> choose;
 		if (std::cin.fail()) {
 			std::cin.clear();
@@ -25,6 +26,8 @@ int main() {
 		std::string insertString = "";
 
 		bool IdaPattern = false;
+
+		std::cin.clear();
 
 		switch (choose) {
 
@@ -68,21 +71,22 @@ int main() {
 			}
 
 			std::cout << "\n";
+			std::cin.clear();
 			system("pause");
+
 		}
 		break;
 
 		case 3: // ASCII Converter
 		{
-			char cascii[200];
+			std::string cascii;
 
 			std::cout << "Insert Text: ";
-			std::cin >> cascii;
-
+			std::getline(std::cin >> std::ws, cascii);
 			std::cout << "\n";
 
 			std::cout << "Hexadecimal: ";
-			for (int i = 0; i < strlen(cascii); i++) {
+			for (int i = 0; i < cascii.length(); i++) {
 				
 				std::cout << std::hex << std::uppercase  << static_cast<int>(cascii[i]) << "  ";
 			}
@@ -90,12 +94,46 @@ int main() {
 			std::cout << std::dec;
 			std::cout << "\n\n";
 			std::cout << "Decimal: ";
-			for (int i = 0; i < strlen(cascii); i++) {
+			for (int i = 0; i < cascii.length(); i++) {
 
 				std::cout << static_cast<int>(cascii[i]) << "  ";
 			}
 
 			std::cout << "\n\n";
+			std::cin.clear();
+			system("pause");
+		}
+		break;
+
+		case 4: // Case Converter
+		{
+			std::string text;
+			std::string textCapt;
+
+
+
+			std::cout << "Insert Text: ";
+			std::getline(std::cin >> std::ws, text);
+			std::cout << "\n";
+			textCapt = text;
+
+			std::cout << "Upper Case: " << UpperString(text) << std::endl;
+
+			std::cout << "\n";
+			std::cout << "Lower Case: " << LowerString(text) << std::endl;
+			std::cout << "\n";
+
+			for (int i = 0; i < text.length(); i++) {
+				if (i == 0)
+					textCapt[i] = toupper(textCapt[i]);
+				else if(textCapt[i] == ' ')
+					textCapt[i + 1] = toupper(textCapt[i + 1]);
+			}
+			std::cout << "Captalized Case: " << textCapt << std::endl;
+
+
+			std::cout << "\n\n";
+			std::cin.clear();
 			system("pause");
 		}
 		break;
@@ -108,9 +146,6 @@ int main() {
 			system("pause");
 		}
 		break;
-
-
-
 
 
 		}

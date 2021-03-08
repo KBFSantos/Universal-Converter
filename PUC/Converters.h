@@ -2,6 +2,7 @@
 #include <Bits.h>
 #include <bitset>
 #include <math.h>
+#include <algorithm>
 #include <string>
 
 template<std::size_t N>
@@ -59,4 +60,14 @@ std::string ConvertSigs(std::string sig,bool idapa) {
 	return sig;
 
 
+}
+
+std::string UpperString(std::string text) {
+	std::transform(text.begin(), text.end(), text.begin(), ::toupper);
+	return text;
+}
+
+std::string LowerString(std::string text) {
+	std::transform(text.begin(), text.end(), text.begin(), ::tolower);
+	return text;
 }

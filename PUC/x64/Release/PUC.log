@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\Will\source\repos\PUC\PUC\Converters.h(38,29): warning C4267: 'inicializando': conversão de 'size_t' para 'int32_t', possível perda de dados
+C:\Users\Will\source\repos\PUC\PUC\Converters.h(17,13): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Will\source\repos\PUC\PUC\main.cpp(42): message : consulte a referência à instanciação 'int BinaryToInt<32>(std::bitset<32> &)' do modelo que está sendo compilada
+  Gerando código
+  1 of 199 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finalizada a geração de código
+  PUC.vcxproj -> C:\Users\Will\source\repos\PUC\x64\Release\PUC.exe

@@ -12,6 +12,7 @@ Many people have difficulty converting some data manually, and it is really exha
 - [x] Binary Converter, [ Decimal,Hexadecimal, Char]
 - [x] Sig Converter, [Code Style & IDA Style]
 - [x] ASCII Converter, [Hexadecimal, Decimal]
+- [x] Case Converter, [UpperCase, CaptalizedCase, LowerCase]
 
 ## License
 
