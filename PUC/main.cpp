@@ -4,6 +4,8 @@
 
 void PrintLogo();
 
+void ClearCinBuffer();
+
 int main() {
 	SetConsoleTitleA("Universal Converter");
 	do {
@@ -11,15 +13,12 @@ int main() {
 		PrintLogo();
 
 		int choose = 0;
-		std::cout << "1 - Binary Converter\n2 - Signature Converter\n3 - ASCII Converter\n4 - Case Converter\n\n";
+		std::cout << "1 - Binary Converter\n2 - Signature Converter\n3 - ASCII Converter\n4 - Case Converter\n5 - Bit Converter\n\n";
 
 		std::cout << "Select: ";
 		
 		std::cin >> choose;
-		if (std::cin.fail()) {
-			std::cin.clear();
-			std::cin.ignore(256, '\n');
-		}
+		ClearCinBuffer();
 		system("cls");
 
 
@@ -71,7 +70,6 @@ int main() {
 			}
 
 			std::cout << "\n";
-			std::cin.clear();
 			system("pause");
 
 		}
@@ -100,7 +98,6 @@ int main() {
 			}
 
 			std::cout << "\n\n";
-			std::cin.clear();
 			system("pause");
 		}
 		break;
@@ -133,7 +130,20 @@ int main() {
 
 
 			std::cout << "\n\n";
-			std::cin.clear();
+			system("pause");
+		}
+		break;
+
+		case 5:
+		{
+			float bitcountbuffer;
+			std::cout << "Insert Bit Count: ";
+			std::cin >> bitcountbuffer;
+			std::cout << "\n";
+
+			std::cout << "Byte: " << BitToByte(bitcountbuffer) << std::endl;
+
+			std::cout << "\n";
 			system("pause");
 		}
 		break;
@@ -149,6 +159,7 @@ int main() {
 
 
 		}
+		ClearCinBuffer();
 	} while (true);
 	
 
@@ -166,4 +177,11 @@ void PrintLogo() {
  | |_| | | | | |\ V /  __/ |  \__ \ (_| | | | |__| (_) | | | \ V /  __/ |  | ||  __/ |   
   \___/|_| |_|_| \_/ \___|_|  |___/\__,_|_|  \____\___/|_| |_|\_/ \___|_|   \__\___|_|   
                                                                                          )" << "\n\n";
+}
+
+void ClearCinBuffer() {
+	if (std::cin.fail()) {
+		std::cin.clear();
+		std::cin.ignore(256, '\n');
+	}
 }

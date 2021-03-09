@@ -5,6 +5,8 @@
 #include <algorithm>
 #include <string>
 
+constexpr float BitValueRelativeByte = 0.125f;
+
 template<std::size_t N>
 int BinaryToInt(std::bitset<N>& b) {
 	constexpr int PowerBase = 2;
@@ -70,4 +72,8 @@ std::string UpperString(std::string text) {
 std::string LowerString(std::string text) {
 	std::transform(text.begin(), text.end(), text.begin(), ::tolower);
 	return text;
+}
+
+float BitToByte(float bitcount) {
+	return bitcount * BitValueRelativeByte;
 }
