@@ -51,20 +51,21 @@ int main() {
 		{
 
 
-			std::cout << "Insert the Pattern: "; std::cin >> insertString;
+			std::cout << "Insert the Pattern: "; 
+			std::getline(std::cin >> std::ws, insertString);
 
 			if (insertString.find("\\x") != std::string::npos) {
 				IdaPattern = false;
-				std::cout << "\n\n";
+				std::cout << "\n";
 				ConvertSigs(insertString, IdaPattern);
 			}
 			else if (insertString.find("?") != std::string::npos) {
 				IdaPattern = true;
-				std::cout << "\n\n";
+				std::cout << "\n";
 				ConvertSigs(insertString, IdaPattern);
 			}
 			else {
-				std::cout << "\n\n";
+				std::cout << "\n";
 				std::cout << "Error invalid Pattern!" << '\n';
 
 			}
