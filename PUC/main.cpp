@@ -109,7 +109,6 @@ int main() {
 			std::string textCapt;
 
 
-
 			std::cout << "Insert Text: ";
 			std::getline(std::cin >> std::ws, text);
 			std::cout << "\n";
@@ -129,6 +128,9 @@ int main() {
 			}
 			std::cout << "Captalized Case: " << textCapt << std::endl;
 
+			std::cout << "\n";
+			std::cout << "Inversed Case: " << InvertString(text) << std::endl;
+
 
 			std::cout << "\n\n";
 			system("pause");
@@ -143,6 +145,7 @@ int main() {
 			std::cout << "\n";
 
 			std::cout << "Byte: " << BitToByte(bitcountbuffer) << std::endl;
+			std::cout << "KiloByte: " << std::setprecision(7) << BitToKBT(bitcountbuffer) << std::endl;
 
 			std::cout << "\n";
 			system("pause");

@@ -3,9 +3,11 @@
 #include <bitset>
 #include <math.h>
 #include <algorithm>
+#include <iomanip>
 #include <string>
 
 constexpr float BitValueRelativeByte = 0.125f;
+constexpr double BitValueRelativeKB = 0.000125;
 
 template<std::size_t N>
 int BinaryToInt(std::bitset<N>& b) {
@@ -74,6 +76,24 @@ std::string LowerString(std::string text) {
 	return text;
 }
 
+std::string InvertString(std::string text) {
+
+	std::string inversedString = text;
+	for (int i = 0; i < text.length(); i++) {
+
+		if (i == 0)
+			inversedString[i] = toupper(inversedString[i]);
+		else
+			inversedString[i * 2] = toupper(inversedString[i * 2]);
+
+	}
+	return inversedString;
+}
+
 float BitToByte(float bitcount) {
 	return bitcount * BitValueRelativeByte;
+}
+
+float BitToKBT(float bitcount) {
+	return bitcount * BitValueRelativeKB;
 }
