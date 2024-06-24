@@ -38,9 +38,9 @@ int main() {
 			std::cin >> binary;
 
 
-			std::cout << "\n" << "Interger: " << BinaryToInt(binary) << std::endl;
-			std::cout << "HexaDecimal: " << std::hex  << std::uppercase << BinaryToInt(binary) << std::dec << std::nouppercase << std::endl;
-			std::cout << "Char: " << static_cast<char>(BinaryToInt(binary)) << std::endl;
+			std::cout << "\n" << "Interger: " << DataConverter::BinaryToInt(binary) << std::endl;
+			std::cout << "HexaDecimal: " << std::hex << std::uppercase << DataConverter::BinaryToInt(binary) << std::dec << std::nouppercase << std::endl;
+			std::cout << "Char: " << static_cast<char>(DataConverter::BinaryToInt(binary)) << std::endl;
 
 			std::cout << "\n";
 			system("pause");
@@ -57,12 +57,12 @@ int main() {
 			if (insertString.find("\\x") != std::string::npos) {
 				IdaPattern = false;
 				std::cout << "\n";
-				ConvertSigs(insertString, IdaPattern);
+				DataConverter::ConvertSigs(insertString, IdaPattern);
 			}
 			else if (insertString.find("?") != std::string::npos) {
 				IdaPattern = true;
 				std::cout << "\n";
-				ConvertSigs(insertString, IdaPattern);
+				DataConverter::ConvertSigs(insertString, IdaPattern);
 			}
 			else {
 				std::cout << "\n";
@@ -106,30 +106,22 @@ int main() {
 		case 4: // Case Converter
 		{
 			std::string text;
-			std::string textCapt;
 
 
 			std::cout << "Insert Text: ";
 			std::getline(std::cin >> std::ws, text);
 			std::cout << "\n";
-			textCapt = text;
 
-			std::cout << "Upper Case: " << UpperString(text) << std::endl;
-
-			std::cout << "\n";
-			std::cout << "Lower Case: " << LowerString(text) << std::endl;
-			std::cout << "\n";
-
-			for (int i = 0; i < text.length(); i++) {
-				if (i == 0)
-					textCapt[i] = toupper(textCapt[i]);
-				else if(textCapt[i] == ' ')
-					textCapt[i + 1] = toupper(textCapt[i + 1]);
-			}
-			std::cout << "Captalized Case: " << textCapt << std::endl;
+			std::cout << "Upper Case: " << DataConverter::UpperString(text) << std::endl;
 
 			std::cout << "\n";
-			std::cout << "Inversed Case: " << InvertString(text) << std::endl;
+			std::cout << "Lower Case: " << DataConverter::LowerString(text) << std::endl;
+			std::cout << "\n";
+	
+			std::cout << "Captalized Case: " << DataConverter::StringToCaptalizedCase(text) << std::endl;
+
+			std::cout << "\n";
+			std::cout << "Inversed Case: " << DataConverter::InvertString(text) << std::endl;
 
 
 			std::cout << "\n\n";
@@ -144,8 +136,8 @@ int main() {
 			std::cin >> bitcountbuffer;
 			std::cout << "\n";
 
-			std::cout << "Byte: " << BitToByte(bitcountbuffer) << std::endl;
-			std::cout << "KiloByte: " << std::setprecision(7) << BitToKBT(bitcountbuffer) << std::endl;
+			std::cout << "Byte: " << DataConverter::BitToByte(bitcountbuffer) << std::endl;
+			std::cout << "KiloByte: " << std::setprecision(7) << DataConverter::BitToKBT(bitcountbuffer) << std::endl;
 
 			std::cout << "\n";
 			system("pause");
