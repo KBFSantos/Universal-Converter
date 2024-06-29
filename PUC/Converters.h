@@ -1,11 +1,8 @@
 #pragma once
 
-#include <iostream>
 #include <Bits.h>
 #include <bitset>
 #include <math.h>
-#include <algorithm>
-#include <iomanip>
 #include <string>
 
 

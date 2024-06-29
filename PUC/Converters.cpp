@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Converters.h"
+#include <algorithm>
+#include <iostream>
 
 std::string DataConverter::ConvertSigs(std::string sig, bool idapa) {
 	if (idapa)

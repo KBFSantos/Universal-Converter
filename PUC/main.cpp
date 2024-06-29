@@ -1,6 +1,6 @@
 #include "Converters.h"
-#include <Windows.h>
-
+#include <iostream>
+#include <iomanip>
 
 void PrintLogo();
 
@@ -38,9 +38,9 @@ int main() {
 			std::cin >> binary;
 
 
-			std::cout << "\n" << "Interger: " << DataConverter::BinaryToInt(binary) << std::endl;
-			std::cout << "HexaDecimal: " << std::hex << std::uppercase << DataConverter::BinaryToInt(binary) << std::dec << std::nouppercase << std::endl;
-			std::cout << "Char: " << static_cast<char>(DataConverter::BinaryToInt(binary)) << std::endl;
+			std::cout << "\n" << "Interger: " << DataConverter::BinaryToInt(binary) << "\n";
+			std::cout << "HexaDecimal: " << std::hex << std::uppercase << DataConverter::BinaryToInt(binary) << std::dec << std::nouppercase << "\n";
+			std::cout << "Char: " << static_cast<char>(DataConverter::BinaryToInt(binary)) << "\n";
 
 			std::cout << "\n";
 			system("pause");
@@ -112,16 +112,16 @@ int main() {
 			std::getline(std::cin >> std::ws, text);
 			std::cout << "\n";
 
-			std::cout << "Upper Case: " << DataConverter::UpperString(text) << std::endl;
+			std::cout << "Upper Case: " << DataConverter::UpperString(text) << "\n";
 
 			std::cout << "\n";
-			std::cout << "Lower Case: " << DataConverter::LowerString(text) << std::endl;
+			std::cout << "Lower Case: " << DataConverter::LowerString(text) << "\n";
 			std::cout << "\n";
 	
-			std::cout << "Captalized Case: " << DataConverter::StringToCaptalizedCase(text) << std::endl;
+			std::cout << "Captalized Case: " << DataConverter::StringToCaptalizedCase(text) << "\n";
 
 			std::cout << "\n";
-			std::cout << "Inversed Case: " << DataConverter::InvertString(text) << std::endl;
+			std::cout << "Inversed Case: " << DataConverter::InvertString(text) << "\n";
 
 
 			std::cout << "\n\n";
@@ -136,8 +136,8 @@ int main() {
 			std::cin >> bitcountbuffer;
 			std::cout << "\n";
 
-			std::cout << "Byte: " << DataConverter::BitToByte(bitcountbuffer) << std::endl;
-			std::cout << "KiloByte: " << std::setprecision(7) << DataConverter::BitToKBT(bitcountbuffer) << std::endl;
+			std::cout << "Byte: " << DataConverter::BitToByte(bitcountbuffer) << "\n";
+			std::cout << "KiloByte: " << std::setprecision(7) << DataConverter::BitToKBT(bitcountbuffer) << "\n";
 
 			std::cout << "\n";
 			system("pause");
@@ -147,7 +147,7 @@ int main() {
 		default:
 		{
 			std::cout << "\n";
-			std::cout << "Incorrect Option";
+			std::cout << "Invalid Option";
 			std::cout << "\n\n";
 			system("pause");
 		}
